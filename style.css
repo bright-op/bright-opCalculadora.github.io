@@ -17,8 +17,8 @@
 
 body{
     background-color: var(--Lightgrayishcyan);
-    font-family: monospace;
-    font-weight: 700;
+    font-family: spacemono;
+    font-weight: 700;    
 }
 button{
     cursor: pointer;
@@ -45,24 +45,22 @@ button{
 
 
 /* inputs */
-.flex-icon-input{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    /* border:2px solid red; */
-}
 .flex-personas{
     display: flex;
     justify-content: space-between;
     width: 83%;
-    margin-bottom:20px;
+    margin-bottom:10px;
+}
+.cal-title{
+    margin-bottom:10px;
 }
 input{
-    padding:11px;
+    padding:10px;
     border: none;
     background-color: var(--Verylightgrayishcyan);
     font-size: 24px;
     text-align: right;
+    width: 90%;
 }
 .label-cuenta{
     position:relative; 
@@ -75,7 +73,6 @@ input{
     width: 10px;
     height: 15px;
     margin:auto;
-    /* text-align: center; */
     background:url(/tip-calculator-app-main/images/icon-dollar.svg) ;
 }
 .label-personas{
@@ -95,16 +92,6 @@ input{
 input[type=number]:focus{
     color:var(--Verydarkcyan);
     outline:2px solid aqua;
-}
-.icon-input{
-    background-color: var(--Verylightgrayishcyan);
-    padding: 10px;
-    width:40px;
-    height: 50px;
-    margin-left: 4px;
-    /* border-radius: 5px; */
-    /* display: inline; */
-    text-align: center;
 }
 .tip{
     margin:50px auto;
@@ -157,6 +144,9 @@ input[type=number]:focus{
     font-size: 32px;
 }
 
+.resultados-tip{
+    margin-top: 20px;
+}
 .resultados-total{
     margin-top: 70px;
 }
@@ -174,7 +164,9 @@ input[type=number]:focus{
     background-color: var(--colorPrincipal);
     font-weight: bold;
 }
-
+.btn-reset:focus{
+    background-color: var(--Lightgrayishcyan);
+}
 /* modal custom */
 .contenedor-modal-custom{
     width: 100vw;
@@ -210,14 +202,12 @@ input[type=number]:focus{
 }
 
 .contenedor-modal-custom{
-    /* display: none; */
     transition: ease-in 0.5s;
     clip-path: circle(0%);
 }
 /* js claslist */
 
 .open-modal{
-    /* display: block; */
     clip-path: circle(100%);
 
 }
@@ -230,12 +220,29 @@ input[type=number]:focus{
         flex-direction: column;
         width: 100%;
         height: auto;
+        margin:auto;
     }
     .calculadora{
-        width: 80%;
+        width: 100%;
+    }
+    .tip{
+        width: 100%;
+        text-align: center;
+    }
+    .tip button{
+        width: 120px;
+    }
+    input{
+       width:100%;
     }
     .contenedor-resultado{
-        width: 80%;
+        width: 100%;
         margin:40px auto;
+    }
+    .contenedor-modal-custom{
+        position:fixed
+    }
+    .modal-custom{
+        width: 90%;
     }
 }
